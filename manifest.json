@@ -1,0 +1,22 @@
+{
+  "name": "Alvianz Store",
+  "short_name": "Alvianz",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#8a2be2",
+  "orientation": "portrait",
+  "description": "Toko tampilan situs premium. Saatnya jadi bandar — modal ringan, untung maksimal. Dikembangkan oleh AlvianzLX.",
+  "icons": [
+    {
+      "src": "https://g.top4top.io/p_3473bzvyx1.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://g.top4top.io/p_3473bzvyx1.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+/* 🌐 Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* 🎞️ Animasi Slowmo */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+.fade-out {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 🔐 Login Screen */
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+#login-screen input {
+  padding: 12px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+#login-screen button {
+  background: #8a2be2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px #8a2be2;
+  transition: 0.3s;
+}
+#login-screen button:hover {
+  background: #a64bf4;
+}
+.brand {
+  font-family: 'Audiowide', cursive;
+  color: #ff4081;
+}
+.slogan {
+  margin: 10px 0 20px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* 🧭 Navigasi Bawah */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(26, 26, 46, 0.9);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 2px solid #8a2be2;
+  backdrop-filter: blur(10px);
+}
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+nav button:hover {
+  color: #ff4081;
+}
+
+/* 📦 Konten Halaman */
+#content {
+  padding: 20px;
+  padding-bottom: 100px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 🛍️ Produk */
+.produk-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 300px;
+  box-shadow: 0 0 15px #8a2be2;
+  backdrop-filter: blur(8px);
+}
+.produk-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.produk-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.produk-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.produk-card button {
+  background: #ff4081;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff4081;
+}
+.produk-card button:hover {
+  background: #ff66a3;
+}
+
+/* 💸 Deposit & Akun */
+input, textarea {
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+button.kirim-wa {
+  background: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #25d366;
+}
+button.kirim-wa:hover {
+  background: #1ebe5d;
+}
+
+/* 📣 Promo Marquee */
+.promo-marquee {
+  background: linear-gradient(to right, #8a2be2, #ff4081);
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px #ff4081;
+}
+
+/* 💬 Alvia AI Chat */
+#alvia-chat {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+}
+#alvia-chat button {
+  background: #00c3ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #00c3ff;
+  cursor: pointer;
+}
+#alvia-box {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 250px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+/* 🧾 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  background: transparent;
+  margin-top: 40px;
+}
+footer strong {
+  color: #ff4081;
+}

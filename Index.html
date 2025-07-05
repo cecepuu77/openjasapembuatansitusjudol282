@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎰 Alvianz Store — Situs Premium</title>
+
+  <!-- 🌐 Manifest & Font -->
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔍 Metadata -->
+  <meta name="author" content="AlvianzLX" />
+  <meta name="description" content="Toko tampilan situs premium. Saatnya jadi bandar — modal ringan, untung maksimal. Dikembangkan oleh AlvianzLX." />
+</head>
+<body>
+
+  <!-- 🔐 Login -->
+  <div id="login-screen" class="fade-in">
+    <img src="https://g.top4top.io/p_3473bzvyx1.jpg" alt="Logo" class="logo" />
+    <h1>Selamat Datang di <span class="brand">Alvianz Store</span></h1>
+    <p class="slogan">🎰 Selalu kalah main slot? <br>💼 Saatnya jadi bandar — <strong>modal ringan, untung maksimal!</strong></p>
+    <input type="text" id="username" placeholder="Masukkan Nama Anda" />
+    <button onclick="masuk()">Lanjutkan</button>
+  </div>
+
+  <!-- 🧭 Dashboard -->
+  <div id="dashboard" style="display:none;">
+    <!-- 📣 Promo Berjalan -->
+    <marquee class="promo-marquee">
+      🔥 Situs Terlaris Minggu Ini — Diskon Hingga 60%! 💰 Beli Tampilan Hari Ini, Online Hari Ini! 🚀 Promo UG 70% Hanya Hari Ini!
+    </marquee>
+
+    <div id="content"></div>
+
+    <nav>
+      <button onclick="tampilkan('beranda')">🏠 Beranda</button>
+      <button onclick="tampilkan('deposit')">💸 Deposit</button>
+      <button onclick="tampilkan('akun')">👤 Akun Saya</button>
+    </nav>
+
+    <!-- 🧠 Alvia AI (Placeholder) -->
+    <div id="alvia-chat">
+      <button onclick="toggleAlvia()">💬 Tanya Alvia</button>
+      <div id="alvia-box" style="display:none;">
+        <p><strong>Alvia AI:</strong> Hai! Tanyakan apa pun seputar slot atau situs kamu 😉</p>
+        <input type="text" placeholder="Tanya sesuatu..." />
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧾 Footer Branding -->
+  <footer>
+    <p>Developed with ❤️ by <strong>AlvianzLX</strong></p>
+    <p>© Alvianz 2025. All rights reserved.</p>
+  </footer>
+
+  <!-- 🔔 Notifikasi Promo -->
+  <script>
+    const notif = {
+      title: "🎰 Promo Alvianz!",
+      body: "Diskon 70% untuk tampilan UG hari ini!",
+      icon: "https://g.top4top.io/p_3473bzvyx1.jpg"
+    };
+    if ("Notification" in window) {
+      if (Notification.permission !== "granted") {
+        Notification.requestPermission().then(status => {
+          if (status === "granted") new Notification(notif.title, notif);
+        });
+      } else {
+        new Notification(notif.title, notif);
+      }
+    }
+  </script>
+
+  <!-- 🔽 Script -->
+  <script type="module" src="firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
